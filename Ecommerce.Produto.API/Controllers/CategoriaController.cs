@@ -90,7 +90,7 @@ namespace Ecommerce.Produto.API.Controllers
         /// <returns></returns>
         [HttpPut]
         [Produces<CategoriaEntity>]
-        public IActionResult Put([FromBody] CategoriaDTO categoriaDTO, [FromQuery] int id)
+        public IActionResult Put(int id, [FromBody] CategoriaDTO categoriaDTO)
         {
 
             ValidationResult result = _categoriaDTOValidator.Validate(categoriaDTO);
